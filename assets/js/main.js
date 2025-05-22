@@ -227,3 +227,22 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+/**
+ * Theme toggle
+ */
+const themeToggleBtn = document.querySelector('#theme-toggle');
+const themeIcon = themeToggleBtn.querySelector('i');
+
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+  document.documentElement.setAttribute('data-theme', 'dark');
+  themeIcon.classList.replace('bi-moon', 'bi-sun');
+}
+
+themeToggleBtn.addEventListener('click', () => {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  localStorage.setItem('theme', isDark ? 'light' : 'dark');
+  themeIcon.classList.replace(isDark ? 'bi-sun' : 'bi-moon', isDark ? 'bi-moon' : 'bi-sun');
+});

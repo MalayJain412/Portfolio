@@ -57,6 +57,34 @@
   scroll-behavior: smooth;
 }
 
+/* Light mode (default) */
+:root {
+  --background-color: #ffffff;
+  --default-color: #272829;
+  --heading-color: #45505b;
+  --accent-color: #0563bb;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] {
+  --background-color: #121212;
+  --default-color: #f0f0f0;
+  --heading-color: #f8f8f8;
+  --accent-color: #4dabf7; /* optional: softer accent for dark mode */
+  --surface-color: #1e1e1e;
+  --contrast-color: #ffffff;
+}
+
+/* Apply dynamic theme colors globally */
+body {
+  background-color: var(--background-color);
+  color: var(--default-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
@@ -542,7 +570,9 @@ section,
   inset: 0;
   z-index: 2;
 }
-
+[data-theme="dark"] .hero:before {
+  background: rgba(0, 0, 0, 0.6); /* darker overlay for readability */
+  }
 .hero .container {
   position: relative;
   z-index: 3;
@@ -1504,3 +1534,21 @@ section,
   /* Add your styles here */
 }
 
+/* Dark mode fix for about section table */
+.about .content table.table {
+  background-color: var(--surface-color);
+  color: var(--default-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .about .content table.table th,
+  .about .content table.table td {
+  color: var(--default-color);
+  background-color: var(--surface-color);
+  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  }
+  
+  .about .content table.table a {
+  color: var(--accent-color);
+  }
