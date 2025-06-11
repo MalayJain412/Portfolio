@@ -226,6 +226,40 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  /**
+   * Resume Download Loader and Message
+   */
+  function setupResumeLoader(btnId, loaderId, msgId) {
+  const btn = document.getElementById(btnId);
+  const loader = document.getElementById(loaderId);
+  const msg = document.getElementById(msgId);
+
+  if (btn && loader && msg) {
+    btn.addEventListener('click', () => {
+      loader.style.display = 'block';
+      msg.style.display = 'none';
+      btn.disabled = true;
+
+      // Simulate loading time
+      setTimeout(() => {
+        loader.style.display = 'none';
+        msg.style.display = 'block';
+        btn.disabled = false;
+
+        // ✅ Auto-hide the message after 5 seconds
+        setTimeout(() => {
+          msg.style.display = 'none';
+        }, 5000);
+      }, 2000);
+    });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  setupResumeLoader('resume-download-btn', 'resume-loader', 'resume-message');
+});
+
+
 })();
 
 /**

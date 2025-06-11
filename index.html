@@ -115,8 +115,24 @@
         <!-- Download Resume Button -->
         <div class="container text-center" data-aos="fade-up" style="margin-bottom: 20px;">
           <h1>Resume</h1>
-          <a href="assets/Malay_Jain_Resume.pdf" class="download-button" download="Malay_Jain_Resume.pdf">Download Resume</a>
-        </div><!-- End Download Button -->
+
+          <!-- Simple Loader -->
+          <div id="resume-loader" style="display: none; margin: 10px auto;">
+            <div class="simple-spinner"></div>
+            <p>Downloading...</p>
+          </div>
+
+          <!-- Success Message -->
+          <p id="resume-message" style="display: none; color: green; font-weight: bold;">Resume downloaded!</p>
+
+          <!-- Download Button -->
+          <a href="assets/Malay_Jain_Resume.pdf"
+            class="download-button"
+            id="resume-download-btn"
+            download="Malay_Jain_Resume.pdf">Download Resume</a>
+        </div>
+
+
       </div>
       
     </section><!-- /Hero Section -->
@@ -336,16 +352,16 @@
 
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
-    <h2>Resume</h2>
-    <h3>Pursuing a B.Tech in Artificial Intelligence and Machine Learning, with hands-on experience in developing machine learning models and system automation. Strong foundation in programming languages and active involvement in tech communities.</h3>
+    <h2>Internship and Certifications</h2>
+    <!-- <h3>Pursuing a B.Tech in Artificial Intelligence and Machine Learning, with hands-on experience in developing machine learning models and system automation. Strong foundation in programming languages and active involvement in tech communities.</h3> -->
   </div><!-- End Section Title -->
 
   <div class="container">
 
     <div class="row">
 
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-        <!-- <h3 class="resume-title">Summary</h3>
+      <!--<div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="resume-title">Summary</h3>
          
         <div class="resume-item pb-0">
           <h4>Malay Jain</h4>
@@ -354,7 +370,7 @@
             <li>Bhopal, India</li>
             <li>malayjain1234@gmail.com</li>
           </ul>
-        </div>End Resume Item -->
+        </div>End Resume Item
 
         <h3 class="resume-title">Projects</h3>       
         
@@ -369,7 +385,7 @@
             <li>Achieved high forecasting accuracy—95% for solar and 91% for wind energy.</li>
             <li>Deployed a real-time prediction API integrated into analytics dashboards, reducing decision-making time by 50%.</li>
           </ul>
-        </div><!-- End Resume Item -->
+        </div>End Resume Item
 
         <div class="resume-item">
           <h4>1 Billion Row Data Analysis</h4>
@@ -379,7 +395,7 @@
           <ul>
             <li>Using Big data frameworks : Spark, Hadoop, Apache Performed rigrous analysis of 1 BBillion Row dataset (approx:45 GB)</li>
           </ul>
-        </div><!-- End Resume Item -->
+        </div>End Resume Item
 
         <div class="resume-item">
           <h4>Food Waste Reduction Plateform</h4>
@@ -391,7 +407,7 @@
             <li>Waste Reduction: Implemented a system to track food wastage, identifying trends and optimizing food preparation to minimize waste.</li>
             <li>Inventory Optimization: Developed an inventory management feature to track food stock, alert users about near-expiry items, and improve resource utilization.</li>
           </ul>
-        </div><!-- End Resume Item -->
+        </div>End Resume Item
         
         <div class="resume-item">
           <h4>IOT Based Smart Agriculture Monitoring System </h4>
@@ -403,7 +419,7 @@
             <li><b>Data Display:</b> Shows real-time data on an LCD screen and updates it on the Blynk IoT platform.</li>
             <li><b>Alerts:</b> Activates a buzzer and LED to signal rain detection, ensuring timely notifications.</li>
           </ul>
-        </div><!-- End Resume Item -->
+        </div>End Resume Item
 
         <div class="resume-item">
           <h4>Stock Price Prediction & Forecasting Platform</h4>
@@ -418,7 +434,7 @@
             <li>Implemented modular architecture across Flask back-end APIs, prediction pipelines, and reusable Streamlit UI components.</li>
             <li><b>Tech Stack:</b> Python, Streamlit, Flask, XGBoost, ARIMA, Pandas, Matplotlib, Yahoo Finance API, SQLite, Pickle, HTML/CSS</li>
           </ul>
-        </div><!-- End Resume Item -->
+        </div>End Resume Item
         
         <div class="resume-item">
           <h4>Expertise Link</h4>
@@ -427,7 +443,7 @@
             <li>ExpertMatch AI is an advanced AI-driven system that automates the selection of experts for interview panels. By leveraging NLP and machine learning, it efficiently matches candidates with relevant experts, reducing manual effort and increasing accuracy.</li>
           </ul>
         
-        </div><!-- End Resume Item -->
+        </div>End Resume Item
         <div class="resume-item">
           <h4>Heart Disease Prediction Model</h4>
           <h5>2023</h5>
@@ -436,7 +452,7 @@
             <li>Developed a machine learning model to predict heart disease with high accuracy.</li>
             <li>Presented the project at IIT Mandi, showcasing the use of AI/ML techniques in healthcare.</li>
           </ul>
-        </div><!-- End Resume Item -->
+        </div>End Resume Item
 
         <div class="resume-item">
           <h4>Dispensary Automation System</h4>
@@ -446,46 +462,32 @@
             <li>Designed and implemented an automation system for the university dispensary.</li>
             <li>Presented the system at hackathons, demonstrating skills in system design and implementation.</li>
           </ul>
-        </div><!-- End Resume Item -->
-
-
-      </div>
-
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        </div>End Resume Item
         
+      </div>
+      -->
+
+      <!-- <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+         -->
         <h3 class="resume-title">Internship</h3>
         
-        <div class="resume-item">
-          <h4>GreenScan</h4>
-          <h4><em><b>Full Stack Flask application built at Inventohack Innovations Internship</b></em></h4>
-          <h5>April 2025 - July 2025</h5>
-          <p><em>AI Intern Inventohack Innovations</em></p>
-          <ul>
-            <li>Developed a full-stack AI-powered web platform using Flask for real-time fruit/vegetable freshness detection and personalized dietary recommendations.</li>
-            <li>Integrated Gemini API for image-based produce analysis and USDA API for dynamic nutrition data retrieval.</li>
-            <li>Implemented DeepSeek Recommender to provide AI-driven synergic fruit suggestions tailored to user profiles.</li>
-            <li>Designed a secure login system with Flask-Login and SQLAlchemy, with profile-based data storage using MySQL and Docker deployment.</li>
-            <li>Created RESTful APIs and implemented session-based storage for image scanning history and analytics.</li>
-            <li><b>Tech Stack:</b> Python, Flask, MySQL, SQLAlchemy, HTML/CSS, JavaScript, Docker, Gemini API, USDA API, OpenRouter, DeepSeek, Flask-Login</li>
-          </ul>
-        </div><!-- End Resume Item -->
 
-        <div class="resume-item">
-          <h4>Hero Product Recommendation System</h4>
-          <h4><em><b>Full Stack ML Dashboard with Streamlit and Flask at AI Intern Inventohack Innovations</b></em></h4>
-          <h5>January 2025 – April 2025</h5>
-          <p><em>AI Intern Inventohack Innovations</em></p>
-          <ul>
-            <li>Developed a full-stack ML application to recommend high-performing electronic products using KPIs, BCG matrix, and customer analytics.</li>
-            <li>Built a Random Forest Regression model to forecast product revenue/unit and identify Hero Products based on predicted performance and confidence levels.</li>
-            <li>Integrated advanced inventory analytics, real-time search, stock status monitoring, and category-based filtering using Streamlit and Pandas.</li>
-            <li>Designed an admin-authenticated Flask web platform with user login, dashboard visualization, and real-time KPI tracking.</li>
-            <li>Implemented BCG Matrix classification (Stars, Cows, Dogs, Question Marks) and trending product detection for smart reorder suggestions.</li>
-            <li><b>Tech Stack:</b> Python, Flask, Streamlit, Pandas, Scikit-learn, SQLAlchemy, HTML/CSS, SQLite, Matplotlib, Seaborn</li>
-          </ul>
-        </div><!-- End Resume Item -->
+          <div class="resume-item">
+            <h4>AI Intern, Inventohack Innovations</h4>
+            <h5>January 2025 – July 2025</h5>
+            <p><em>Role:</em> Full Stack Development and Machine Learning Integration</p>
+            <p><b>Technologies I have worked on during this time:</b></p>
+            <ul>
+              <li><b>Frontend:</b> HTML, CSS, JavaScript, Streamlit</li>
+              <li><b>Backend:</b> Python, Flask</li>
+              <li><b>ML/AI:</b> Scikit-learn, Deep Learning, Pandas, Matplotlib, Seaborn, Ollama</li>
+              <li><b>Database:</b> MySQL, SQLAlchemy</li>
+              <li><b>DevOps:</b> Docker, Azure, Render</li>
+              <li><b>APIs/Tools:</b> API Integration, Flask-Login</li>
+            </ul>
+          </div><!-- End Resume Item -->
         
-        <h3 class="resume-title">Education</h3>
+        <!-- <h3 class="resume-title">Education</h3>
         
         <div class="resume-item">
           <h4>B.Tech. in Artificial Intelligence and Machine Learning</h4>
@@ -499,7 +501,7 @@
           <h5>June 2022</h5>
           <p><em>St. Joseph's Convent S.S. School, Sagar</em></p>
           <p><strong>Percentage:</strong> 84.2%</p>
-        </div>
+        </div> -->
 
         <h3 class="resume-title">Community Leadership</h3>
         <div class="resume-item">
@@ -543,14 +545,30 @@
         </div><!-- End Resume Item -->
 
 
-      </div>
+      <!-- </div> -->
       
     </div>
     <!-- Download Resume Button -->
-    <div class="container text-center" data-aos="fade-up" style="margin-bottom: 20px;">
-      <h1>Here is Link to resume</h1>
-      <a href="assets/Malay_Jain_Resume.pdf" class="download-button" download="Malay_Jain_Resume.pdf">Download Resume</a>
-    </div><!-- End Download Button -->
+    <!-- Resume Download Section -->
+      <div class="container text-center" data-aos="fade-up" style="margin-bottom: 20px;">
+        <h1>Here is Link to detailed resume</h1>
+
+        <!-- Simple Loader -->
+        <div id="resume-loader" style="display: none; margin: 10px auto;">
+          <div class="simple-spinner"></div>
+          <p>Downloading...</p>
+        </div>
+
+        <!-- Success Message -->
+        <p id="resume-message" style="display: none; color: green; font-weight: bold;">Resume downloaded!</p>
+
+        <!-- Download Button -->
+        <a href="assets/Malay_Jain_Resume.pdf"
+          class="download-button"
+          id="resume-download-btn"
+          download="Malay_Jain_Resume.pdf">Download Resume</a>
+      </div>
+    <!-- End Download Button -->
 
   </div>
 
