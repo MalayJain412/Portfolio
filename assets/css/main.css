@@ -576,6 +576,7 @@ section,
 .hero .container {
   position: relative;
   z-index: 3;
+  text-align: center;
 }
 
 .hero h2 {
