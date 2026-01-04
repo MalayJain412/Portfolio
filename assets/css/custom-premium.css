@@ -1,0 +1,132 @@
+/* ==========================================================================
+   Premium UI Improvements
+   ========================================================================== */
+
+/* 1. Hero Section & Buttons */
+.btn-hero {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--gradient-primary);
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    letter-spacing: 1px;
+}
+
+.btn-hero:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(9, 132, 227, 0.4);
+    color: #fff;
+}
+
+/* 2. Enhanced Navigation */
+.navmenu .active i,
+.navmenu .active span {
+    color: #fff !important;
+}
+
+.navmenu a {
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navmenu a.active {
+    background: var(--gradient-primary) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 3. Glassmorphism Cards (Projects & Research) */
+.service-item {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+/* Dark mode specific glassmorphism */
+[data-theme="dark"] .service-item {
+    background: rgba(30, 30, 30, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.service-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    border-color: var(--accent-color);
+}
+
+[data-theme="dark"] .service-item:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    border-color: var(--accent-color-secondary);
+}
+
+/* 4. Image Enhancements */
+.project-image {
+    border-radius: 10px;
+    object-fit: cover;
+    width: 100%;
+    height: 200px !important;
+    /* Fixed height for consistency */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+}
+
+.service-item:hover .project-image {
+    transform: scale(1.05);
+}
+
+/* 5. Typography & Spacing */
+.section-title h2 {
+    font-size: 3rem;
+    letter-spacing: -1px;
+}
+
+section,
+.section {
+    padding: 80px 0;
+    /* More breathable whitespace */
+}
+
+/* 6. Contact Section Enhancements */
+.contact .info-item,
+.contact .php-email-form {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+}
+
+[data-theme="dark"] .contact .info-item,
+[data-theme="dark"] .contact .php-email-form {
+    background: rgba(30, 30, 30, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* 7. Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color-secondary);
+}

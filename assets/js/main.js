@@ -229,35 +229,7 @@
   /**
    * Resume Download Loader and Message
    */
-  function setupResumeLoader(btnId, loaderId, msgId) {
-  const btn = document.getElementById(btnId);
-  const loader = document.getElementById(loaderId);
-  const msg = document.getElementById(msgId);
-
-  if (btn && loader && msg) {
-    btn.addEventListener('click', () => {
-      loader.style.display = 'block';
-      msg.style.display = 'none';
-      btn.disabled = true;
-
-      // Simulate loading time
-      setTimeout(() => {
-        loader.style.display = 'none';
-        msg.style.display = 'block';
-        btn.disabled = false;
-
-        // ✅ Auto-hide the message after 5 seconds
-        setTimeout(() => {
-          msg.style.display = 'none';
-        }, 5000);
-      }, 2000);
-    });
-  }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  setupResumeLoader('resume-download-btn', 'resume-loader', 'resume-message');
-});
+// Resume loader logic removed for better UX
 
 
 })();
@@ -279,4 +251,137 @@ themeToggleBtn.addEventListener('click', () => {
   document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
   localStorage.setItem('theme', isDark ? 'light' : 'dark');
   themeIcon.classList.replace(isDark ? 'bi-sun' : 'bi-moon', isDark ? 'bi-moon' : 'bi-sun');
+});
+
+/* Voice Orb: move from inline HTML to main JS */
+document.addEventListener('DOMContentLoaded', () => {
+  // Render Lucide icons used inside the orb
+  if (window.lucide && typeof lucide.createIcons === 'function') lucide.createIcons();
+
+  const coreEl = document.getElementById('voice-core');
+  const iconEl = document.getElementById('voice-icon');
+  const visEl = document.getElementById('voice-visualizer');
+  const ring1 = document.getElementById('voice-ring-1');
+  const ring2 = document.getElementById('voice-ring-2');
+  const tooltip = document.getElementById('voice-tooltip');
+
+  if (!coreEl || !iconEl || !visEl || !ring1 || !ring2) {
+    // Required DOM nodes not present; silently skip
+    return;
+  }
+
+  let voiceState = 'idle'; // idle, listening, speaking
+
+  // Expose toggle for the inline onclick
+  window.toggleVoice = function() {
+    if (!('speechSynthesis' in window)) {
+      // Fallback: briefly flash tooltip
+      if (tooltip) {
+        tooltip.textContent = 'Speech not supported in this browser';
+        setTimeout(() => tooltip.textContent = '🎤 Tap to hear my intro', 2000);
+      }
+      return;
+    }
+
+    if (voiceState === 'speaking') {
+      window.speechSynthesis.cancel();
+      setVoiceState('idle');
+      return;
+    }
+
+    if (voiceState === 'idle') {
+      setVoiceState('listening');
+      setTimeout(() => speakIntro(), 800);
+    }
+  };
+
+  function setVoiceState(state) {
+    voiceState = state;
+
+    // reset classes
+    coreEl.classList.remove('listening', 'speaking');
+    visEl.classList.remove('active');
+    if (tooltip) tooltip.style.opacity = '';
+    ring1.style.transition = '';
+    ring2.style.transition = '';
+
+    // clear icon container
+    iconEl.innerHTML = '';
+
+    if (state === 'idle') {
+      const micIcon = document.createElement('i');
+      micIcon.setAttribute('data-lucide', 'mic');
+      micIcon.style.width = '40px';
+      micIcon.style.height = '40px';
+      iconEl.appendChild(micIcon);
+      if (window.lucide && typeof lucide.createIcons === 'function') lucide.createIcons();
+    }
+
+    if (state === 'listening') {
+      coreEl.classList.add('listening');
+      if (tooltip) tooltip.style.opacity = '0';
+
+      const spinner = document.createElement('div');
+      spinner.className = 'spinner-border text-purple-500';
+      spinner.style.width = '36px';
+      spinner.style.height = '36px';
+      spinner.style.borderWidth = '3px';
+      iconEl.appendChild(spinner);
+    }
+
+    if (state === 'speaking') {
+      coreEl.classList.add('speaking');
+      visEl.classList.add('active');
+      if (tooltip) tooltip.style.opacity = '0';
+
+      // Expand rings visually
+      ring1.style.transform = 'scale(1.5)';
+      ring1.style.opacity = '0';
+      ring2.style.transform = 'scale(1.25)';
+      ring2.style.opacity = '0';
+
+      const pauseIcon = document.createElement('i');
+      pauseIcon.setAttribute('data-lucide', 'pause');
+      pauseIcon.style.width = '40px';
+      pauseIcon.style.height = '40px';
+      iconEl.appendChild(pauseIcon);
+      if (window.lucide && typeof lucide.createIcons === 'function') lucide.createIcons();
+    }
+  }
+
+  function speakIntro() {
+    if (!('speechSynthesis' in window)) return setVoiceState('idle');
+
+    setVoiceState('speaking');
+
+    const text = "Hello! I'm Malay. I build scalable web applications and integrate intelligent AI solutions. Welcome to my portfolio.";
+    const utterance = new SpeechSynthesisUtterance(text);
+
+    utterance.onend = () => setVoiceState('idle');
+
+    // choose a friendly voice if available
+    const voices = window.speechSynthesis.getVoices() || [];
+    const preferred = voices.find(v => /Google|Samantha|Microsoft/i.test(v.name));
+    if (preferred) utterance.voice = preferred;
+    utterance.pitch = 1;
+    utterance.rate = 1.05;
+
+    try {
+      window.speechSynthesis.speak(utterance);
+    } catch (err) {
+      console.warn('SpeechSynthesis error', err);
+      setVoiceState('idle');
+    }
+  }
+
+  // preload voices in some browsers
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.getVoices();
+    // some browsers populate asynchronously
+    window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
+  }
+
+  // initial state
+  setVoiceState('idle');
+
 });

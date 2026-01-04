@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
-  
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Devfolio-Malay Jain</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta content="AI/ML Engineer Portfolio - Malay Jain" name="description">
+  <meta content="AI, ML, Machine Learning, Python, Portfolio" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/icon.png" rel="icon">
@@ -16,7 +16,13 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons for Voice Orb -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,7 +32,8 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">  
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/custom-premium.css" rel="stylesheet">
   <!-- =======================================================
   * Template Name: MyResume
   * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
@@ -35,20 +42,20 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 
-    
-    
+
+
 </head>
 
 <body class="index-page">
   <!-- Theme Toggle Button -->
-<button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-  <i class="bi bi-moon"></i>
-</button>
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+    <i class="bi bi-moon"></i>
+  </button>
 
   <header id="header" class="header d-flex flex-column justify-content-center">
-    
+
     <i class="header-toggle d-xl-none bi bi-list"></i>
-    
+
     <nav id="navmenu" class="navmenu">
       <ul>
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
@@ -59,53 +66,75 @@
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
       </ul>
     </nav>
-    
+
   </header>
-  
+
   <main class="main">
-    
+
     <!-- Hero Section -->
     <section id="hero" class="hero section light-background">
-      
+
       <img src="assets/img/hero-bg.jpg" alt="">
-      
+
       <div class="container" data-aos="zoom-out">
-        <div class="row justify-content-center">
-          <div class="col-lg-9">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-7">
             <h2>I am Malay Jain</h2>
             <h3>Keen Learner &amp; Innovative Mind</h3>
             <h2>Aspiring AI &amp; ML Engineer</h2>
-            <p>I have knowledge of <span class="typed" data-typed-items="Python, Data-science, SQL, Flask, Content Writing"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+            <p>I have knowledge of <span class="typed"
+                data-typed-items="Python, Data-science, SQL, Flask, Content Writing"></span><span
+                class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+
+            <div class="d-flex justify-content-center gap-3 align-items-center mt-4">
+              <a href="assets/Malay_Jain_Resume.pdf" class="btn-hero" download="Malay_Jain_Resume.pdf"><i
+                  class="bi bi-download me-2"></i>Download CV</a>
+            </div>
+
             <div class="social-links">
               <a href="https://github.com/MalayJain412" target="_blank"><i class="bi bi-github"></i></a>
-              <a href="https://www.linkedin.com/in/malay-jain-706b03267/" target="_blank"><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.linkedin.com/in/malay-jain-706b03267/" target="_blank"><i
+                  class="bi bi-linkedin"></i></a>
               <a href="https://www.kaggle.com/malayjain" target="_blank"><i class="bi bi-database"></i></a>
             </div>
           </div>
-        </div>
-        <!-- Download Resume Button -->
-        <div class="container text-center" data-aos="fade-up" style="margin-bottom: 20px;">
-          <h1>Resume</h1>
-
-          <!-- Simple Loader -->
-          <div id="resume-loader" style="display: none; margin: 10px auto;">
-            <div class="simple-spinner"></div>
-            <p>Downloading...</p>
+          
+          <!-- Voice Orb -->
+          <div class="col-lg-4">
+            <div class="voice-orb-container">
+              <!-- Animated Rings -->
+              <div id="voice-ring-1" class="voice-orb-ring-1"></div>
+              <div id="voice-ring-2" class="voice-orb-ring-2"></div>
+              
+              <!-- The Orb Core -->
+              <div id="voice-core" onclick="toggleVoice()" class="voice-orb-core">
+                <!-- Visualizer (Hidden by default) -->
+                <div id="voice-visualizer" class="voice-visualizer">
+                  <div class="visualizer-bar" style="animation-duration: 0.4s"></div>
+                  <div class="visualizer-bar" style="animation-duration: 0.5s"></div>
+                  <div class="visualizer-bar" style="animation-duration: 0.3s"></div>
+                  <div class="visualizer-bar" style="animation-duration: 0.6s"></div>
+                  <div class="visualizer-bar" style="animation-duration: 0.4s"></div>
+                </div>
+                
+                <!-- Icon State -->
+                <div id="voice-icon" class="voice-icon">
+                  <i data-lucide="mic" style="width: 40px; height: 40px;"></i>
+                </div>
+                
+                <!-- Glow -->
+                <div class="voice-orb-glow"></div>
+              </div>
+              
+              <!-- Floating Tooltip -->
+              <div id="voice-tooltip" class="voice-tooltip">
+                🎤 Tap to hear my intro
+              </div>
+            </div>
           </div>
-
-          <!-- Success Message -->
-          <p id="resume-message" style="display: none; color: green; font-weight: bold;">Resume downloaded!</p>
-
-          <!-- Download Button -->
-          <a href="assets/Malay_Jain_Resume.pdf"
-            class="download-button"
-            id="resume-download-btn"
-            download="Malay_Jain_Resume.pdf">Download Resume</a>
         </div>
-
-
       </div>
-      
+
     </section><!-- /Hero Section -->
 
     <!-- About Section -->
@@ -114,7 +143,9 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>About</h2>
-        <p>I'm acquiring the expertise and understanding necessary to develop captivating and interactive machinery and software through the utilization of AI and ML technologies.</p>      </div><!-- End Section Title -->
+        <p>I'm acquiring the expertise and understanding necessary to develop captivating and interactive machinery and
+          software through the utilization of AI and ML technologies.</p>
+      </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -122,13 +153,21 @@
           <div class="col-lg-4">
             <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
           </div>
-          
-            <div class="col-lg-8 content">
-              <h2>AIML 3rd Year Graduate.</h2>
-              <p>I am currently in my third year of pursuing a B.Tech in Artificial Intelligence and Machine Learning at the Sagar Institute of Research and Technology (SIRT), Bhopal. With a strong foundation in AI and ML, I have contributed to multiple capstone projects, leveraging technologies such as machine learning, deep learning, API integration, Flask, and Python. I have actively participated in various technical competitions and IIT hackathons. In addition to my academic and technical pursuits, I have been actively involved in community events as a volunteer, further strengthening my collaborative and leadership skills. I am passionate about advancing innovation in AI/ML and eager to collaborate with organizations and individuals working at the forefront of this field.</p>
-              <div class="row">
-                <div class="col-lg-20">
-                  <ul><table class="table">
+
+          <div class="col-lg-8 content">
+            <h2>AIML 3rd Year Graduate.</h2>
+            <p>I am currently in my third year of pursuing a B.Tech in Artificial Intelligence and Machine Learning at
+              the Sagar Institute of Research and Technology (SIRT), Bhopal. With a strong foundation in AI and ML, I
+              have contributed to multiple capstone projects, leveraging technologies such as machine learning, deep
+              learning, API integration, Flask, and Python. I have actively participated in various technical
+              competitions and IIT hackathons. In addition to my academic and technical pursuits, I have been actively
+              involved in community events as a volunteer, further strengthening my collaborative and leadership skills.
+              I am passionate about advancing innovation in AI/ML and eager to collaborate with organizations and
+              individuals working at the forefront of this field.</p>
+            <div class="row">
+              <div class="col-lg-20">
+                <ul>
+                  <table class="table">
                     <tbody>
                       <tr>
                         <th scope="row"></i> <strong>Branch:</strong></th>
@@ -148,15 +187,18 @@
                       </tr>
                       <tr>
                         <th scope="row"></i> <strong>LinkedIn:</strong></th>
-                        <td><a href="https://www.linkedin.com/in/malay-jain-706b03267/" target="_blank">https://www.linkedin.com/in/malay-jain-706b03267/</a></td>
+                        <td><a href="https://www.linkedin.com/in/malay-jain-706b03267/"
+                            target="_blank">https://www.linkedin.com/in/malay-jain-706b03267/</a></td>
                       </tr>
                       <tr>
                         <th scope="row"></i> <strong>Github:</strong></th>
-                        <td><a href="https://github.com/MalayJain412" target="_blank">https://github.com/MalayJain412</a></td>
+                        <td><a href="https://github.com/MalayJain412"
+                            target="_blank">https://github.com/MalayJain412</a></td>
                       </tr>
                       <tr>
                         <th scope="row"></i> <strong>Kaggle:</strong></th>
-                        <td><a href="https://www.kaggle.com/malayjain" target="_blank">https://www.kaggle.com/malayjain</a></td>
+                        <td><a href="https://www.kaggle.com/malayjain"
+                            target="_blank">https://www.kaggle.com/malayjain</a></td>
                       </tr>
                       <tr>
                         <th scope="row"></i> <strong>Email:</strong></th>
@@ -168,20 +210,25 @@
                       </tr>
                       <tr>
                         <th scope="row"></i> <strong>Technical Proficiency:</strong></th>
-                        <td>Skilled in C, C++, Python, and MySQL, with experience in programming algorithms, team management, and project development.</td>
+                        <td>Skilled in C, C++, Python, and MySQL, with experience in programming algorithms, team
+                          management, and project development.</td>
                       </tr>
                       <tr>
                         <th scope="row"></i> <strong>Leadership & Community Engagement:</strong></th>
-                        <td>Google Developers Group on campus Organizer, Active as a GFG Campus Ambassador and health lead for the Young India organization, promoting tech learning and health initiatives.</td>
+                        <td>Google Developers Group on campus Organizer, Active as a GFG Campus Ambassador and health
+                          lead for the Young India organization, promoting tech learning and health initiatives.</td>
                       </tr>
                     </tbody>
                   </table>
-                  </ul>
-                </div>
+                </ul>
               </div>
-              <p>Till now in my academic journey, I have gained experience in various programming languages like Python, C++, and SQL.</p>
-              <p>I am currently learning Machine Learning algorithms, Deep Learning algorithms, data science principles, and cloud technologies like AWS, and I aim to go further in this field mastering it and becoming full fledeged Machine Learning Engineer.</p>
             </div>
+            <p>Till now in my academic journey, I have gained experience in various programming languages like Python,
+              C++, and SQL.</p>
+            <p>I am currently learning Machine Learning algorithms, Deep Learning algorithms, data science principles,
+              and cloud technologies like AWS, and I aim to go further in this field mastering it and becoming full
+              fledeged Machine Learning Engineer.</p>
+          </div>
         </div>
 
       </div>
@@ -198,7 +245,8 @@
           <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
             <i class="bi bi-book"></i>
             <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="1"
+                class="purecounter"></span>
               <p>Courses Completed</p>
             </div>
           </div><!-- End Stats Item -->
@@ -206,7 +254,8 @@
           <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
             <i class="bi bi-trophy"></i>
             <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1"
+                class="purecounter"></span>
               <p>Capstone Projects</p>
             </div>
           </div><!-- End Stats Item -->
@@ -214,7 +263,8 @@
           <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
             <i class="bi bi-briefcase"></i>
             <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1"
+                class="purecounter"></span>
               <p>Hackathons Attended</p>
             </div>
           </div><!-- End Stats Item -->
@@ -222,7 +272,8 @@
           <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
             <i class="bi bi-award"></i>
             <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1"
+                class="purecounter"></span>
               <p>Technical Certifications Earned</p>
             </div>
           </div><!-- End Stats Item -->
@@ -251,28 +302,32 @@
             <div class="progress">
               <span class="skill"><span>Machine Learning</span> <i class="val">60%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                </div>
               </div>
             </div><!-- End Skills Item -->
 
             <div class="progress">
               <span class="skill"><span>Python</span> <i class="val">90%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                </div>
               </div>
             </div><!-- End Skills Item -->
 
             <div class="progress">
               <span class="skill"><span>DSA</span> <i class="val">42%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="42" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="42" aria-valuemin="0" aria-valuemax="100">
+                </div>
               </div>
             </div><!-- End Skills Item -->
 
             <div class="progress">
               <span class="skill"><span>C++</span> <i class="val">60%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                </div>
               </div>
             </div><!-- End Skills Item -->
 
@@ -283,28 +338,32 @@
             <div class="progress">
               <span class="skill"><span>SQL</span> <i class="val">85%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                </div>
               </div>
             </div><!-- End Skills Item -->
 
             <div class="progress">
               <span class="skill"><span>Flask</span> <i class="val">80%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                </div>
               </div>
             </div><!-- End Skills Item -->
 
             <div class="progress">
               <span class="skill"><span>Power-Bi</span> <i class="val">45%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+                </div>
               </div>
             </div><!-- End Skills Item -->
 
             <div class="progress">
               <span class="skill"><span>HTML/CSS</span> <i class="val">30%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                </div>
               </div>
             </div><!-- End Skills Item -->
 
@@ -316,22 +375,22 @@
 
     </section><!-- /Skills Section -->
 
- <!-- Resume Section -->
-<section id="resume" class="resume section">
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
 
-  
 
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Internship and Certifications</h2>
-    <!-- <h3>Pursuing a B.Tech in Artificial Intelligence and Machine Learning, with hands-on experience in developing machine learning models and system automation. Strong foundation in programming languages and active involvement in tech communities.</h3> -->
-  </div><!-- End Section Title -->
 
-  <div class="container">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Internship and Certifications</h2>
+        <!-- <h3>Pursuing a B.Tech in Artificial Intelligence and Machine Learning, with hands-on experience in developing machine learning models and system automation. Strong foundation in programming languages and active involvement in tech communities.</h3> -->
+      </div><!-- End Section Title -->
 
-    <div class="row">
+      <div class="container">
 
-      <!--<div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="row">
+
+          <!--<div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
         <h3 class="resume-title">Summary</h3>
          
         <div class="resume-item pb-0">
@@ -438,10 +497,10 @@
       </div>
       -->
 
-      <!-- <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <!-- <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
          -->
-        <h3 class="resume-title">Prefessional Journey</h3>
-        
+          <h3 class="resume-title">Prefessional Journey</h3>
+
 
           <div class="resume-item">
             <h4>AI Intern, Inventohack Innovations</h4>
@@ -457,8 +516,8 @@
               <li><b>APIs/Tools:</b> API Integration, Flask-Login</li>
             </ul>
           </div><!-- End Resume Item -->
-        
-        <!-- <h3 class="resume-title">Education</h3>
+
+          <!-- <h3 class="resume-title">Education</h3>
         
         <div class="resume-item">
           <h4>B.Tech. in Artificial Intelligence and Machine Learning</h4>
@@ -474,114 +533,65 @@
           <p><strong>Percentage:</strong> 84.2%</p>
         </div> -->
 
-        <h3 class="resume-title">Community Leadership</h3>
-        <div class="resume-item">
-          <h4>GFG Campus Ambassador</h4>
-          <h5>2023 - 2024</h5>
-          <p><em>Sagar Institution of Research and Technology, Bhopal</em></p>
-          <ul>
-            <li>Organized events and workshops to foster learning and collaboration within the tech community.</li>
-            <li>Promoted learning initiatives and engaged with peers to enhance technical skills.</li>
-          </ul>
-        </div><!-- End Resume Item -->
+          <h3 class="resume-title">Community Leadership</h3>
+          <div class="resume-item">
+            <h4>GFG Campus Ambassador</h4>
+            <h5>2023 - 2024</h5>
+            <p><em>Sagar Institution of Research and Technology, Bhopal</em></p>
+            <ul>
+              <li>Organized events and workshops to foster learning and collaboration within the tech community.</li>
+              <li>Promoted learning initiatives and engaged with peers to enhance technical skills.</li>
+            </ul>
+          </div><!-- End Resume Item -->
 
-        <div class="resume-item">
-          <h4>Google Developer Group Organizer - SIT Chapter</h4>
-          <h5>2024 - Present</h5>
-          <p><em>Sagar Institution of Research and Technology, Bhopal</em></p>
-          <ul>
-            <li>Organized events and workshops to foster learning and collaboration within the tech community.</li>
-            <li>Promoted learning initiatives and engaged with peers to enhance technical skills.</li>
-          </ul>
-        </div><!-- End Resume Item -->
+          <div class="resume-item">
+            <h4>Google Developer Group Organizer - SIT Chapter</h4>
+            <h5>2024 - Present</h5>
+            <p><em>Sagar Institution of Research and Technology, Bhopal</em></p>
+            <ul>
+              <li>Organized events and workshops to foster learning and collaboration within the tech community.</li>
+              <li>Promoted learning initiatives and engaged with peers to enhance technical skills.</li>
+            </ul>
+          </div><!-- End Resume Item -->
 
-        <div class="resume-item">
-          <h4>Health Lead, Young India Organization</h4>
-          <h5>2023 - Present</h5>
-          <p><em>Sagar Institution of Research and Technology, Bhopal</em></p>
-          <ul>
-            <li>Led health-related initiatives and community engagement projects.</li>
-            <li>Focused on promoting health awareness and preventive care among the youth.</li>
-          </ul>
-        </div><!-- End Resume Item -->
+          <div class="resume-item">
+            <h4>Health Lead, Young India Organization</h4>
+            <h5>2023 - Present</h5>
+            <p><em>Sagar Institution of Research and Technology, Bhopal</em></p>
+            <ul>
+              <li>Led health-related initiatives and community engagement projects.</li>
+              <li>Focused on promoting health awareness and preventive care among the youth.</li>
+            </ul>
+          </div><!-- End Resume Item -->
 
-        <h3 class="resume-title">Certification Courses</h3>
-        <div class="resume-item">
-          <ul>
-            <li>Project Based Learning of IOT - <b>IBM Skils-Build</b></li>
-            <li>Python for Data-Science - <b>NPTEL</b></li>
-            <li>Python - <b>HackerRank</b></li>
-            <li>MySQL - <b>HackerRank</b></li>
-          </ul>
-        </div><!-- End Resume Item -->
+          <h3 class="resume-title">Certification Courses</h3>
+          <div class="resume-item">
+            <ul>
+              <li>Project Based Learning of IOT - <b>IBM Skils-Build</b></li>
+              <li>Python for Data-Science - <b>NPTEL</b></li>
+              <li>Python - <b>HackerRank</b></li>
+              <li>MySQL - <b>HackerRank</b></li>
+            </ul>
+          </div><!-- End Resume Item -->
 
 
-      <!-- </div> -->
-      
-    </div>
-    <!-- Resume Download Section -->
+          <!-- </div> -->
+
+        </div>
+        <!-- Resume Download Section -->
     <div class="container text-center" data-aos="fade-up" style="margin-bottom: 20px;">
-          <h1>Resume</h1>
-
-          <!-- Simple Loader -->
-          <div id="resume-loader" style="display: none; margin: 10px auto;">
-            <div class="simple-spinner"></div>
-            <p>Downloading...</p>
-          </div>
-
-          <!-- Success Message -->
-          <p id="resume-message" style="display: none; color: green; font-weight: bold;">Resume downloaded!</p>
-
-          <!-- Download Button -->
           <a href="assets/Malay_Jain_Resume.pdf"
-            class="download-button"
-            id="resume-download-btn"
-            download="Malay_Jain_Resume.pdf">Download Resume</a>
+            class="btn-hero"
+            download="Malay_Jain_Resume.pdf"><i class="bi bi-file-earmark-pdf me-2"></i>Download Resume</a>
     </div>
 
-    <!-- End Download Button -->
+        <!-- End Download Button -->
 
-  </div>
+      </div>
 
-</section><!-- /Resume Section -->
+    </section><!-- /Resume Section -->
 
-<!-- Custom CSS -->
-<style>
-  .download-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #007bff;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
 
-  .download-button:hover {
-    background-color: #0056b3;
-  }
-</style>
-
-<style>
-    .hover-image {
-        width: 100%;
-        height: auto;
-        transition: transform 0.3s ease; /* Smooth transition */
-    }
-
-    .hover-image:hover {
-        transform: scale(1.5); /* Enlarge the image */
-    }
-</style>
-
-<style>
-  .click-image {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-  }
-</style>
 
     <!-- Projects Section -->
     <section id="Projects" class="Projects section">
@@ -595,12 +605,13 @@
 
       <div class="container">
         <div class="row gy-4 justify-content-center">
-          
+
           <!-- SAVE THAT GRAVY: FOOD WASTE AMANGEMENT PLATEFORM -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item item-cyan position-relative">
               <a href="https://morph-ai.onrender.com/" target="_blank">
-                <img src="assets/img/project-1.png" alt="food waste management Project" class="project-image" style="width:100%; height:auto; display:block; margin-bottom:15px;">
+                <img src="assets/img/project-1.png" alt="food waste management Project" class="project-image"
+                  style="width:100%; height:auto; display:block; margin-bottom:15px;">
               </a>
             </div>
             <h3><b>SAVE THAT GRAVY</b>: FOOD WASTE AMANGEMENT PLATEFORM </h3>
@@ -609,18 +620,22 @@
           <!-- AI Powered Solar and Wind Energy Forecasting -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item item-cyan position-relative">
-              <a href="https://github.com/MalayJain412/AI-Renewable-energy-forcasting.git" target="_blank" class="project-link">
-                <img src="assets\img\NTPC.jpg" alt="AI Powered Solar and Wind Energy Forecasting" class="project-image" style="width:100%; height:auto; display:block; margin-bottom:15px;">
+              <a href="https://github.com/MalayJain412/AI-Renewable-energy-forcasting.git" target="_blank"
+                class="project-link">
+                <img src="assets\img\NTPC.jpg" alt="AI Powered Solar and Wind Energy Forecasting" class="project-image"
+                  style="width:100%; height:auto; display:block; margin-bottom:15px;">
               </a>
             </div>
             <h3><b>AI Powered Solar and Wind Energy Forecasting</b>: POWER FORECASTING </h3>
           </div>
-          
+
           <!-- GreenScan : Fruit and Vegetable health scanner -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item item-cyan position-relative">
-              <a href="https://github.com/InventoHack-MalayShubham/Green-scan-Update-Docker-InventoHack.git" target="_blank" class="project-link">
-                <img src="assets\img\GreenScan.png" alt="GreenScan : Fruit and Vegetable health scanner" class="project-image" style="width:100%; height:auto; display:block; margin-bottom:15px;">
+              <a href="https://github.com/InventoHack-MalayShubham/Green-scan-Update-Docker-InventoHack.git"
+                target="_blank" class="project-link">
+                <img src="assets\img\GreenScan.png" alt="GreenScan : Fruit and Vegetable health scanner"
+                  class="project-image" style="width:100%; height:auto; display:block; margin-bottom:15px;">
               </a>
             </div>
             <h3><b>GreenScan : Fruit and Vegetable health scanner</b></h3>
@@ -630,7 +645,8 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item item-cyan position-relative">
               <a href="https://rsathi.streamlit.app/" target="_blank" class="project-link">
-                <img src="assets\img\rsathi.png" alt="GreenScan : Fruit and Vegetable health scanner" class="project-image" style="width:100%; height:auto; display:block; margin-bottom:15px;">
+                <img src="assets\img\rsathi.png" alt="GreenScan : Fruit and Vegetable health scanner"
+                  class="project-image" style="width:100%; height:auto; display:block; margin-bottom:15px;">
               </a>
             </div>
             <h3><b>Rsathi : Stock Price Prediction</b></h3>
@@ -640,7 +656,8 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item item-cyan position-relative">
               <a href="https://happy-movie-time.streamlit.app/" target="_blank" class="project-link">
-                <img src="assets/img/MovieML.png" alt="Movie Recommendation System" class="project-image" style="width:100%; height:auto; display:block; margin-bottom:15px;">
+                <img src="assets/img/MovieML.png" alt="Movie Recommendation System" class="project-image"
+                  style="width:100%; height:auto; display:block; margin-bottom:15px;">
               </a>
             </div>
             <h3><b>HAPPY MOVIE TIME</b>: MOVIE RECOMMENDATION SYSTEM </h3>
@@ -650,13 +667,15 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item item-cyan position-relative">
               <a href="https://github.com/MalayJain412/Heart-Disease-Model" target="_blank">
-                <img src="assets/img/HDNML.png" alt="PREDICTIVE MODELING FOR CARDIO-VASCULAR DISEASE USING MACHINE LEARNING" class="project-image" style="width:100%; height:auto; display:block; margin-bottom:15px;">
+                <img src="assets/img/HDNML.png"
+                  alt="PREDICTIVE MODELING FOR CARDIO-VASCULAR DISEASE USING MACHINE LEARNING" class="project-image"
+                  style="width:100%; height:auto; display:block; margin-bottom:15px;">
               </a>
             </div>
             <h3><b>CARDIO-VASCULAR DISEASE PREDICTION </b></h3>
           </div>
-          
-          
+
+
 
           <!-- University Dispensary Admin Interface
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
@@ -697,11 +716,15 @@
           <!-- Cardiovascular Disease Prediction Copyright -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item item-cyan position-relative">
-              <a href="https://www.copyright.gov.in/CopyrightROC_Details.aspx?DiaryNo=26283/2024-CO/L&RocNo=L-157174/2024" target="_blank">
-                <img src="assets/img/Heart-Disease-Research-Paper.png" alt="COPYRIGHT PREDICTIVE MODELING FOR CARDIO-VASCULAR DISEASE USING MACHINE LEARNING" class="project-image" style="width:100%; height:auto; display:block; margin-bottom:15px;">
+              <a href="https://www.copyright.gov.in/CopyrightROC_Details.aspx?DiaryNo=26283/2024-CO/L&RocNo=L-157174/2024"
+                target="_blank">
+                <img src="assets/img/Heart-Disease-Research-Paper.png"
+                  alt="COPYRIGHT PREDICTIVE MODELING FOR CARDIO-VASCULAR DISEASE USING MACHINE LEARNING"
+                  class="project-image" style="width:100%; height:auto; display:block; margin-bottom:15px;">
               </a>
             </div>
-            <h3><b>Code Copyright</b>: A Model for Prediction of Cardiovascular Diseases Using Machine Learning Using Random Forest Algorithm</h3>
+            <h3><b>Code Copyright</b>: A Model for Prediction of Cardiovascular Diseases Using Machine Learning Using
+              Random Forest Algorithm</h3>
             <p><strong>Authors:</strong> Malay Jain, Brajesh Singh Ahirwar, Shubham Rahangdale, Aniket Kumar Mishra</p>
             <p><strong>Registration:</strong> L-157174/2024 2</p>
             <p><strong>Date:</strong> Aug 2024</p>
@@ -711,7 +734,8 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item item-cyan position-relative">
               <a href="assets/img/Work Under Progress.png" target="_blank">
-                <img src="assets/img/Work Under Progress.png" alt="New Project" class="project-image" style="width:100%; height:auto; display:block; margin-bottom:15px;">
+                <img src="assets/img/Work Under Progress.png" alt="New Project" class="project-image"
+                  style="width:100%; height:auto; display:block; margin-bottom:15px;">
               </a>
             </div>
             <h3><b>SAVE THAT GRAVY</b>: FOOD WASTE AMANGEMENT PLATEFORM </h3>
@@ -756,11 +780,12 @@
                 <div class="row gy-4 justify-content-center">
                   <div class="col-lg-6">
                     <div class="testimonial-content">
-                      
+
                       <h3>Dr. Minal Saxena</h3>
                       <h4>Deputy Director, Sagar Institute of Research and Technology, Bhopal</h4>
                       <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                          class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                       </div>
                     </div>
                   </div>
@@ -776,11 +801,12 @@
                 <div class="row gy-4 justify-content-center">
                   <div class="col-lg-6">
                     <div class="testimonial-content">
-                      
+
                       <h3>Kalpana Rai</h3>
                       <h4>HOD AIML Department, Sagar Institute of Research and Technology, Bhopal</h4>
                       <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                          class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                       </div>
                     </div>
                   </div>
@@ -801,41 +827,41 @@
     </section><!-- /Testimonials Section -->
 
     <!-- Contact Section -->
-<section id="contact" class="contact section">
+    <section id="contact" class="contact section">
 
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Contact</h2>
-    <p>For any work or query please refer to following:</p>
-  </div><!-- End Section Title -->
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>For any work or query please refer to following:</p>
+      </div><!-- End Section Title -->
 
-  <div class="container" data-aos="fade" data-aos-delay="100">
-      <div class="col-lg-4">
-        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-          <i class="bi bi-geo-alt flex-shrink-0"></i>
-          <div>
-            <h3>Address</h3>
-            <p>Opp. Kwality Sweets, JK Road, Bhopal, MP</p>
-          </div>
-        </div><!-- End Info Item -->
+      <div class="container" data-aos="fade" data-aos-delay="100">
+        <div class="col-lg-4">
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <i class="bi bi-geo-alt flex-shrink-0"></i>
+            <div>
+              <h3>Address</h3>
+              <p>Opp. Kwality Sweets, JK Road, Bhopal, MP</p>
+            </div>
+          </div><!-- End Info Item -->
 
-        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-          <i class="bi bi-telephone flex-shrink-0"></i>
-          <div>
-            <h3>Call Me</h3>
-            <p>6232155888</p>
-          </div>
-        </div><!-- End Info Item -->
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <i class="bi bi-telephone flex-shrink-0"></i>
+            <div>
+              <h3>Call Me</h3>
+              <p>6232155888</p>
+            </div>
+          </div><!-- End Info Item -->
 
-        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-          <i class="bi bi-envelope flex-shrink-0"></i>
-          <div>
-            <h3>Email Me</h3>
-            <p>malayjain1234@gmail.com</p>
-          </div>
-        </div><!-- End Info Item -->
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+            <i class="bi bi-envelope flex-shrink-0"></i>
+            <div>
+              <h3>Email Me</h3>
+              <p>malayjain1234@gmail.com</p>
+            </div>
+          </div><!-- End Info Item -->
 
-      </div>
+        </div>
 
   </main>
 
@@ -851,7 +877,8 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
@@ -870,6 +897,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+ 
 
 </body>
 

@@ -12,20 +12,27 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #2d3436; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #0984e3; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --accent-color-secondary: #6c5ce7; /* Secondary accent for gradients */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
+  --default-color: #272829;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #2d3436;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #0984e3;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color-secondary: #6c5ce7;
+  /* Secondary accent for gradients */
+  --surface-color: #ffffff;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
   --gradient-primary: linear-gradient(135deg, #0984e3 0%, #6c5ce7 100%);
   --gradient-secondary: linear-gradient(135deg, #00cec9 0%, #0984e3 100%);
   --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -39,12 +46,18 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #45505b;  /* The default color of the main navmenu links */
-  --nav-hover-color: #0563bb; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #0563bb; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #45505b;
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #0563bb;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #212529;
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #0563bb;
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -617,8 +630,17 @@ section,
 }
 
 @keyframes shimmer {
-  0%, 100% { opacity: 1; transform: scaleX(1); }
-  50% { opacity: 0.7; transform: scaleX(1.1); }
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+
+  50% {
+    opacity: 0.7;
+    transform: scaleX(1.1);
+  }
 }
 
 .section-title p {
@@ -656,15 +678,20 @@ section,
 }
 
 @keyframes slowZoom {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.1); }
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
 }
 
 .hero:before {
   content: "";
-  background: linear-gradient(135deg, 
-    color-mix(in srgb, var(--background-color), transparent 20%) 0%,
-    color-mix(in srgb, var(--accent-color), transparent 85%) 100%);
+  background: linear-gradient(135deg,
+      color-mix(in srgb, var(--background-color), transparent 20%) 0%,
+      color-mix(in srgb, var(--accent-color), transparent 85%) 100%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -678,9 +705,12 @@ section,
   background: radial-gradient(ellipse at center, transparent 0%, color-mix(in srgb, var(--background-color), transparent 50%) 100%);
   pointer-events: none;
 }
+
 [data-theme="dark"] .hero:before {
-  background: rgba(0, 0, 0, 0.6); /* darker overlay for readability */
-  }
+  background: rgba(0, 0, 0, 0.6);
+  /* darker overlay for readability */
+}
+
 .hero .container {
   position: relative;
   z-index: 3;
@@ -757,6 +787,7 @@ section,
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -811,8 +842,8 @@ section,
   padding: 20px;
 }
 
-.stats .col-lg-3 > div,
-.stats .col-md-6 > .d-flex {
+.stats .col-lg-3>div,
+.stats .col-md-6>.d-flex {
   background: var(--surface-color);
   border-radius: var(--border-radius-lg);
   padding: 30px 20px;
@@ -821,8 +852,8 @@ section,
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
 }
 
-.stats .col-lg-3:hover > div,
-.stats .col-md-6:hover > .d-flex {
+.stats .col-lg-3:hover>div,
+.stats .col-md-6:hover>.d-flex {
   transform: translateY(-10px);
   box-shadow: var(--shadow-strong);
 }
@@ -935,16 +966,21 @@ section,
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(90deg, 
-    transparent 0%, 
-    rgba(255, 255, 255, 0.3) 50%, 
-    transparent 100%);
+  background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      transparent 100%);
   animation: progressShine 2s ease-in-out infinite;
 }
 
 @keyframes progressShine {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1767,6 +1803,568 @@ section,
 }
 
 .service-details .help-box h4,
+
+/*--------------------------------------------------------------
+# Voice Orb Styles
+--------------------------------------------------------------*/
+.voice-orb-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.voice-orb-ring-1 {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  transition: all 1s;
+}
+
+.voice-orb-ring-2 {
+  position: absolute;
+  inset: 16px;
+  border-radius: 50%;
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  transition: all 1s;
+}
+
+.voice-orb-core {
+  position: relative;
+  z-index: 10;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, #0f172a, #1e293b);
+  border: 1px solid #334155;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.voice-orb-core:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.3);
+}
+
+.voice-orb-core.listening {
+  box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.5);
+}
+
+.voice-orb-core.speaking {
+  transform: scale(1.05);
+  box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.5);
+}
+
+.voice-orb-core.speaking .voice-orb-ring-1 {
+  transform: scale(1.5);
+  opacity: 0;
+}
+
+.voice-orb-core.speaking .voice-orb-ring-2 {
+  transform: scale(1.25);
+  opacity: 0;
+}
+
+.voice-visualizer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.voice-visualizer.active {
+  opacity: 1;
+}
+
+.visualizer-bar {
+  width: 6px;
+  background: #22d3ee;
+  border-radius: 9999px;
+  animation: waveform 1s ease-in-out infinite;
+}
+
+@keyframes waveform {
+  0%, 100% { height: 20%; }
+  50% { height: 100%; }
+}
+
+.voice-icon {
+  position: relative;
+  z-index: 20;
+  color: #22d3ee;
+  transition: all 0.3s;
+}
+
+.voice-orb-glow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(6, 182, 212, 0.2), transparent);
+  pointer-events: none;
+}
+
+.voice-tooltip {
+  position: absolute;
+  bottom: -40px;
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid #334155;
+  font-size: 12px;
+  color: #22d3ee;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  animation: bounce 1s infinite;
+  white-space: nowrap;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/*--------------------------------------------------------------
+# Journey Timeline Premium Styles
+--------------------------------------------------------------*/
+.journey-section {
+  padding: 60px 0;
+  background: linear-gradient(180deg, transparent, rgba(6, 182, 212, 0.02), transparent);
+}
+
+.journey-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.journey-title h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.journey-title h2 span {
+  color: #22d3ee;
+}
+
+.journey-timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.journey-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, #334155, #1e293b);
+}
+
+.journey-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.journey-item:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.journey-item:nth-child(odd) .journey-content {
+  text-align: left;
+}
+
+.journey-item:nth-child(even) .journey-content {
+  text-align: right;
+}
+
+.journey-content {
+  width: 45%;
+  padding: 20px;
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid #334155;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s;
+}
+
+.journey-content:hover {
+  border-color: rgba(6, 182, 212, 0.3);
+  transform: translateY(-2px);
+}
+
+.journey-year {
+  font-size: 12px;
+  font-family: monospace;
+  color: #22d3ee;
+  margin-bottom: 8px;
+}
+
+.journey-content h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 4px;
+}
+
+.journey-content .journey-org {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 8px;
+}
+
+.journey-item:nth-child(odd) .journey-org {
+  justify-content: flex-start;
+}
+
+.journey-item:nth-child(even) .journey-org {
+  justify-content: flex-end;
+}
+
+.journey-content p {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.journey-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background: #0f172a;
+  border: 2px solid #22d3ee;
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+}
+
+.journey-spacer {
+  width: 45%;
+}
+
+/*--------------------------------------------------------------
+# Chat Widget Styles
+--------------------------------------------------------------*/
+.chat-widget-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: 'Inter', sans-serif;
+}
+
+.chat-window {
+  display: none;
+  flex-direction: column;
+  width: 360px;
+  height: 450px;
+  margin-bottom: 16px;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  animation: slideUp 0.3s ease-out;
+}
+
+.chat-window.open {
+  display: flex;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chat-header {
+  background: #1e293b;
+  padding: 16px;
+  border-bottom: 1px solid #334155;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chat-status-dot {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.chat-header-title {
+  font-weight: 700;
+  font-size: 14px;
+  color: #e2e8f0;
+}
+
+.chat-close-btn {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.2s;
+}
+
+.chat-close-btn:hover {
+  color: #fff;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: rgba(15, 23, 42, 0.95);
+}
+
+.chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+
+.chat-message {
+  display: flex;
+}
+
+.chat-message.user {
+  justify-content: flex-end;
+}
+
+.chat-message.bot {
+  justify-content: flex-start;
+}
+
+.chat-bubble {
+  max-width: 80%;
+  padding: 10px 16px;
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.chat-message.user .chat-bubble {
+  background: #0891b2;
+  color: #fff;
+  border-bottom-right-radius: 4px;
+}
+
+.chat-message.bot .chat-bubble {
+  background: #1e293b;
+  color: #cbd5e1;
+  border: 1px solid #334155;
+  border-bottom-left-radius: 4px;
+}
+
+.chat-input-form {
+  padding: 12px;
+  background: #1e293b;
+  border-top: 1px solid #334155;
+  display: flex;
+  gap: 8px;
+}
+
+.chat-input {
+  flex: 1;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 9999px;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #e2e8f0;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.chat-input::placeholder {
+  color: #64748b;
+}
+
+.chat-input:focus {
+  border-color: #22d3ee;
+}
+
+.chat-send-btn {
+  width: 40px;
+  height: 40px;
+  background: #0891b2;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.chat-send-btn:hover {
+  background: #06b6d4;
+}
+
+.chat-fab {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  background: #22d3ee;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 10px 40px rgba(6, 182, 212, 0.3);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  color: #0f172a;
+}
+
+.chat-fab:hover {
+  background: #67e8f9;
+  transform: scale(1.1);
+}
+
+.chat-fab:active {
+  transform: scale(0.95);
+}
+
+.chat-fab-icon {
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.chat-fab-icon.hidden {
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+}
+
+.chat-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  display: flex;
+}
+
+.chat-badge-ping {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #f87171;
+  border-radius: 50%;
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  opacity: 0.75;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.chat-badge-dot {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background: #ef4444;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .chat-window {
+    width: calc(100vw - 48px);
+    max-width: 360px;
+  }
+  
+  .journey-timeline::before {
+    left: 20px;
+  }
+  
+  .journey-item,
+  .journey-item:nth-child(odd) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 50px;
+  }
+  
+  .journey-content,
+  .journey-item:nth-child(odd) .journey-content,
+  .journey-item:nth-child(even) .journey-content {
+    width: 100%;
+    text-align: left;
+  }
+  
+  .journey-item:nth-child(odd) .journey-org,
+  .journey-item:nth-child(even) .journey-org {
+    justify-content: flex-start;
+  }
+  
+  .journey-dot {
+    left: 20px;
+  }
+  
+  .journey-spacer {
+    display: none;
+  }
+}
 .service-details .help-box a {
   color: var(--contrast-color);
 }
@@ -1832,9 +2430,9 @@ section,
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, 
-    color-mix(in srgb, var(--accent-color), transparent 20%) 0%,
-    color-mix(in srgb, var(--accent-color-secondary, var(--accent-color)), transparent 30%) 100%);
+  background: linear-gradient(135deg,
+      color-mix(in srgb, var(--accent-color), transparent 20%) 0%,
+      color-mix(in srgb, var(--accent-color-secondary, var(--accent-color)), transparent 30%) 100%);
   opacity: 0;
   display: flex;
   align-items: center;
@@ -1881,18 +2479,18 @@ section,
   color: var(--default-color);
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
   transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .about .content table.table th,
-  .about .content table.table td {
+}
+
+.about .content table.table th,
+.about .content table.table td {
   color: var(--default-color);
   background-color: var(--surface-color);
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
-  }
-  
-  .about .content table.table a {
+}
+
+.about .content table.table a {
   color: var(--accent-color);
-  }
+}
 
 
 /*--------------------------------------------------------------
@@ -1910,8 +2508,13 @@ section,
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1938,7 +2541,7 @@ section,
   opacity: 1;
 }
 
-.service-item > * {
+.service-item>* {
   position: relative;
   z-index: 2;
 }
