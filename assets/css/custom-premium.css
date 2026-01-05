@@ -201,3 +201,27 @@ section,
   padding-bottom: 20px;
   position: relative;
 }
+
+/* Projects Section Headings */
+#Projects .resume-title {
+  color: #149ddd;
+  font-size: 28px;
+  font-weight: 800;
+  margin-top: 40px;
+  margin-bottom: 25px;
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
+#Projects .resume-title::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+}
