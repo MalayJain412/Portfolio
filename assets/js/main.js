@@ -384,4 +384,28 @@ document.addEventListener('DOMContentLoaded', () => {
   // initial state
   setVoiceState('idle');
 
+  /**
+   * EmailJS Contact Form
+   */
+  (function() {
+    // Initialize EmailJS with your public key
+    emailjs.init('sBw4DX9IDQ0WfdTp-'); // Replace with your EmailJS public key
+
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Send the form data using EmailJS
+      emailjs.sendForm('service_7ynmbtc', 'template_ttrn5bx', this) // Updated with your service and template IDs
+        .then(function(response) {
+          const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+          successModal.show();
+          document.getElementById('contact-form').reset();
+        }, function(error) {
+          const errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+          errorModal.show();
+          console.error('EmailJS error:', error);
+        });
+    });
+  })();
+
 });

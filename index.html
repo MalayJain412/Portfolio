@@ -846,6 +846,27 @@
                   <div class="col-lg-6">
                     <div class="testimonial-content">
 
+                      <h3>Talib Ahmed</h3>
+                      <h4>Head of Product & Partnership, Building AI Products, Triotech Bizserve Pvt. Ltd.</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                          class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 text-center">
+                    <img src="assets/img/testimonials/talib-sir.png" class="img-fluid testimonial-img" alt="">
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row gy-4 justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="testimonial-content">
+
                       <h3>Kalpana Rai</h3>
                       <h4>HOD AIML Department, Sagar Institute of Research and Technology, Bhopal</h4>
                       <div class="stars">
@@ -880,32 +901,101 @@
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade" data-aos-delay="100">
-        <div class="col-lg-4">
-          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-            <i class="bi bi-geo-alt flex-shrink-0"></i>
-            <div>
-              <h3>Address</h3>
-              <p>Opp. Kwality Sweets, JK Road, Bhopal, MP</p>
-            </div>
-          </div><!-- End Info Item -->
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Address</h3>
+                <p> Bhopal, MP</p>
+              </div>
+            </div><!-- End Info Item -->
 
-          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-            <i class="bi bi-telephone flex-shrink-0"></i>
-            <div>
-              <h3>Call Me</h3>
-              <p>6232155888</p>
-            </div>
-          </div><!-- End Info Item -->
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Phone Number</h3>
+                <p>6232155888</p>
+              </div>
+            </div><!-- End Info Item -->
 
-          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-            <i class="bi bi-envelope flex-shrink-0"></i>
-            <div>
-              <h3>Email Me</h3>
-              <p>malayjain1234@gmail.com</p>
-            </div>
-          </div><!-- End Info Item -->
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email Me</h3>
+                <p>malayjain1234@gmail.com</p>
+              </div>
+            </div><!-- End Info Item -->
+          </div>
 
+          <div class="col-lg-8">
+            <div class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <form id="contact-form">
+                <div class="row gy-4">
+                  <div class="col-md-6">
+                    <input type="text" name="from_name" class="form-control" placeholder="Your Name" required>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="email" name="from_email" class="form-control" placeholder="Your Email" required>
+                  </div>
+                  <div class="col-md-12">
+                    <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                  </div>
+                  <div class="col-md-12">
+                    <textarea name="message" class="form-control" rows="6" placeholder="Message" required></textarea>
+                  </div>
+                  <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
+      </section><!-- /Contact Section -->
+
+      <!-- Success Modal -->
+      <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content" style="border: none; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
+            <div class="modal-header border-0 pb-0" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); padding: 30px 30px 50px 30px;">
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="position: absolute; right: 15px; top: 15px;"></button>
+            </div>
+            <div class="modal-body text-center" style="padding: 0 30px 30px 30px; margin-top: -35px;">
+              <div style="width: 70px; height: 70px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 5px 20px rgba(40, 167, 69, 0.3);">
+                <i class="bi bi-check-lg" style="font-size: 2.5rem; color: #28a745;"></i>
+              </div>
+              <h4 class="mt-4 mb-2" style="font-weight: 700; color: #333;">Message Sent!</h4>
+              <p style="color: #666; font-size: 0.95rem; margin-bottom: 25px;">Thank you for reaching out! I'll get back to you as soon as possible.</p>
+              <button type="button" class="btn px-5 py-2" data-bs-dismiss="modal" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: #fff; border: none; border-radius: 25px; font-weight: 600; transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 5px 20px rgba(40, 167, 69, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                <i class="bi bi-check2 me-2"></i>Got it!
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Error Modal -->
+      <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content" style="border: none; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
+            <div class="modal-header border-0 pb-0" style="background: linear-gradient(135deg, #dc3545 0%, #fd7e14 100%); padding: 30px 30px 50px 30px;">
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="position: absolute; right: 15px; top: 15px;"></button>
+            </div>
+            <div class="modal-body text-center" style="padding: 0 30px 30px 30px; margin-top: -35px;">
+              <div style="width: 70px; height: 70px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 5px 20px rgba(220, 53, 69, 0.3);">
+                <i class="bi bi-x-lg" style="font-size: 2.5rem; color: #dc3545;"></i>
+              </div>
+              <h4 class="mt-4 mb-2" style="font-weight: 700; color: #333;">Oops! Something went wrong</h4>
+              <p style="color: #666; font-size: 0.95rem; margin-bottom: 25px;">Failed to send your message. Please try again later or contact me directly at <a href="mailto:malayjain1234@gmail.com" style="color: #149ddd;">malayjain1234@gmail.com</a></p>
+              <button type="button" class="btn px-5 py-2" data-bs-dismiss="modal" style="background: linear-gradient(135deg, #dc3545 0%, #fd7e14 100%); color: #fff; border: none; border-radius: 25px; font-weight: 600; transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 5px 20px rgba(220, 53, 69, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                <i class="bi bi-arrow-clockwise me-2"></i>Try Again
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
 
   </main>
 
@@ -938,6 +1028,9 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- EmailJS for contact form -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
